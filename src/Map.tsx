@@ -1,16 +1,21 @@
 export const Map = () => {
+  const bestFit = { w: 640, h: 392 };
+  const aspectRatio = bestFit.w / bestFit.h;
+  const dw = window.innerWidth < bestFit.w ? window.innerWidth * 0.8 : bestFit.w;
+  const dh = dw / aspectRatio;
+
   return (
     <>
       <div style={{
         font: 'normal normal 400 12px/normal dotum, sans-serif',
-        width: '640px',
-        height: '392px',
+        width: `${dw}px`,
+        height: `${dh}px`,
         color: '#333',
         position: 'relative',
       }}>
-        <div style={{ height: '360px' }}>
+        <div style={{ height: `${dh}px` }}>
           <a href="https://map.kakao.com/?urlX=501339.0000000007&amp;urlY=1073443.0000000005&amp;itemId=1407060805&amp;q=%EB%B0%B1%EC%9A%B4%EC%9B%90&amp;srcid=1407060805&amp;map_type=TYPE_MAP&amp;from=roughmap" target="_blank">
-            <img className="map" src="http://t1.daumcdn.net/roughmap/imgmap/70e63490514236a8c30c6c3e76d80c5bf332d7bd7cd7bb81b65ae4d295cbec92" width="638px" height="358px"
+            <img className="map" src="http://t1.daumcdn.net/roughmap/imgmap/70e63490514236a8c30c6c3e76d80c5bf332d7bd7cd7bb81b65ae4d295cbec92" width={`${dw - 2}px`} height={`${dh - 2}px`}
               style={{ border: '1px solid #ccc' }} />
           </a>
         </div>
