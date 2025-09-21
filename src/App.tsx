@@ -1,6 +1,7 @@
 import * as ui from '@chakra-ui/react'
 import './App.css'
-import { Map } from './Map'
+import { Map } from './components/Map'
+import { Contact } from './components/Contact'
 
 function App() {
 
@@ -16,6 +17,15 @@ function App() {
           >
             {/* Title */}
             <ui.Text>//TODO::타이틀(사랑하는 어머니, 심순옥 여사님의 70번째 생신을 축하해 주세요.)</ui.Text>
+          </ui.Flex>
+          <ui.Flex
+            w='full' h='auto'
+            justifyItems={'center'}
+            alignItems={'center'}
+            justifyContent={'flex-end'}
+          >
+            {/* Title */}
+            <ui.Text>장소: 백운원<br/>경기 의왕시 백운안길 61</ui.Text>
           </ui.Flex>
           <ui.Flex justifyItems={'center'} w='full' h='80dvh'
             alignItems={'center'}
@@ -34,43 +44,7 @@ function App() {
             borderColor={'white'}
           >
             {/* 연락처 */}
-            <ui.Grid
-              w='full' h='full'
-              templateAreas={`
-            'title title'
-            'father mother'
-            'misa mingu'
-            `}
-              templateRows={'50px 1fr 1fr'}
-              templateColumns={'1fr 1fr'}
-              gap={1}
-              justifyItems={'center'}
-              alignItems={'center'}
-            >
-              <ui.GridItem area='title'>
-                <ui.Text>//TODO::연락처</ui.Text>
-              </ui.GridItem>
-              <ui.GridItem area='father'>
-                <ui.Flex>
-                  <ui.Text>남편:김준일</ui.Text>
-                </ui.Flex>
-              </ui.GridItem>
-              <ui.GridItem area='mother'>
-                <ui.Flex>
-                  <ui.Text>심순옥</ui.Text>
-                </ui.Flex>
-              </ui.GridItem>
-              <ui.GridItem area='misa'>
-                <ui.Flex>
-                  <ui.Text>장녀:김미사</ui.Text>
-                </ui.Flex>
-              </ui.GridItem>
-              <ui.GridItem area='mingu'>
-                <ui.Flex>
-                  <ui.Text>장남:김민구</ui.Text>
-                </ui.Flex>
-              </ui.GridItem>
-            </ui.Grid>
+            <Contact />
           </ui.Flex>
           <ui.Flex justifyItems={'center'} w='full' h='80dvh'
             alignItems={'center'}
@@ -89,9 +63,12 @@ function App() {
             borderColor={'white'}
           >
             {/* 오시는 길 */}
-            <ui.Text>//TODO::오시는 길</ui.Text>
+            <ui.Text>//TODO::오시는 길<br />
+              경기 의왕시 백운안길 61<br />
+              경기 의왕시 학의동 874-1</ui.Text>
           </ui.Flex>
           <Map />
+          <ui.Box h='30px' />
         </ui.VStack>
       </ui.Box>
     </ui.Flex>
