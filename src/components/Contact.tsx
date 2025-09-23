@@ -1,5 +1,6 @@
 import * as ui from '@chakra-ui/react'
 import { SubTitleText } from './SubTitleText';
+import { FaPhone } from 'react-icons/fa6';
 
 interface ContactItemProps {
   name: string,
@@ -15,7 +16,9 @@ const ContactItem = ({
     <ui.Flex gap={3}>
       <ui.Text fontWeight={'semibold'}>{name}</ui.Text>
       <ui.Link href={`tel:${phone}`}>
-       icon
+        <ui.Icon size='md'>
+          <FaPhone />
+        </ui.Icon>
       </ui.Link>
     </ui.Flex>
   )
