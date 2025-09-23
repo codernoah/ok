@@ -2,6 +2,7 @@ import * as ui from '@chakra-ui/react'
 import './App.css'
 import { Map } from './components/Map'
 import { Contact } from './components/Contact'
+import Gallery from './components/Gallery'
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
     <ui.Flex w='100dvw' h='100dvh'
       justifyContent={'center'}
     >
-      <ui.Box w='80dvw'>
+      <ui.Box w='80vw'>
         <ui.VStack overflowY={'auto'} gap={15}>
           <ui.Flex justifyItems={'center'} w='full' h='15dvh'
             alignItems={'center'}
@@ -25,7 +26,7 @@ function App() {
             justifyContent={'flex-end'}
           >
             {/* Title */}
-            <ui.Text>장소: 백운원<br/>경기 의왕시 백운안길 61</ui.Text>
+            <ui.Text>일시: 2025년 10월 11일<br />시간: 12시 20분<br />장소: 백운원<br />경기 의왕시 백운안길 61</ui.Text>
           </ui.Flex>
           <ui.Flex justifyItems={'center'} w='full' h='80dvh'
             alignItems={'center'}
@@ -46,14 +47,13 @@ function App() {
             {/* 연락처 */}
             <Contact />
           </ui.Flex>
-          <ui.Flex justifyItems={'center'} w='full' h='80dvh'
+          <ui.Flex justifyItems={'center'} w='full' h='auto'
             alignItems={'center'}
             justifyContent={'center'}
-            borderWidth={1}
-            borderColor={'white'}
           >
+            <Gallery />
             {/* 갤러리 */}
-            <ui.Text>//TODO::갤러리 (엄마, 아빠 사진?)</ui.Text>
+            {/* <ui.Text>//TODO::갤러리 (엄마, 아빠 사진?)</ui.Text> */}
           </ui.Flex>
 
           <ui.Flex justifyItems={'center'} w='full' h='10dvh'
