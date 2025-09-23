@@ -1,4 +1,5 @@
 import * as ui from '@chakra-ui/react'
+import { SubTitleText } from './SubTitleText';
 
 interface ContactItemProps {
   name: string,
@@ -11,9 +12,10 @@ const ContactItem = ({
 }: ContactItemProps) => {
 
   return (
-    <ui.Flex>
+    <ui.Flex gap={3}>
+      <ui.Text fontWeight={'semibold'}>{name}</ui.Text>
       <ui.Link href={`tel:${phone}`}>
-        <ui.Text>{name}</ui.Text>
+       icon
       </ui.Link>
     </ui.Flex>
   )
@@ -35,7 +37,7 @@ export const Contact = () => {
       alignItems={'center'}
     >
       <ui.GridItem area='title'>
-        <ui.Text>//TODO::연락처</ui.Text>
+        <SubTitleText text='연락처' />
       </ui.GridItem>
       <ui.GridItem area='father'>
         <ContactItem name='김준일' phone='010-7332-9548' />
