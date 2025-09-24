@@ -6,6 +6,7 @@ import Gallery from './components/Gallery'
 import React from 'react'
 import { Intro } from './components/Intro'
 import { SubTitleText } from './components/SubTitleText'
+import { Palette } from './styles'
 
 function App() {
   const titleRef = React.useRef<HTMLDivElement>(null);
@@ -16,8 +17,11 @@ function App() {
       h='100vh'
       justifyContent={'center'}
       templateAreas={`'header'
+      'gap'
       'body'`}
-      templateRows={'15vh 1fr'}
+      templateRows={'150px 20px 1fr'}
+      bg={Palette.BASE.White}
+      color={Palette.BASE.Black}
     >
       <ui.Image
         position={'fixed'}
@@ -26,16 +30,20 @@ function App() {
         src={'/ok/album/0.png'}
         w='100vw'
         h='100vh'
-        opacity={0.75}
-        zIndex={-1}
+        objectFit={'cover'}
+        opacity={0.3}
+        zIndex={0}
       />
       <ui.GridItem
         area='header'
         w='full'
+        zIndex={1}
       >
         <ui.Flex justifyItems={'center'} w='full' h='full'
           alignItems={'center'}
           justifyContent={'center'}
+          // bg={Palette.BASE.Gray01}
+          borderBottom={`1px solid ${Palette.BASE.Gray08}`}
         >
           {/* Title */}
           <ui.Text
@@ -74,6 +82,7 @@ function App() {
                 alignItems={'center'}
                 justifyContent={'center'}
                 direction={'column'}
+                zIndex={1}
               >
                 {/* 오시는 길 */}
                 <SubTitleText text='오시는 길' />
@@ -93,6 +102,7 @@ function App() {
                 borderWidth={1}
                 borderColor={'white'}
                 borderRadius={'30px'}
+                zIndex={1}
               >
                 {/* 연락처 */}
                 <Contact />

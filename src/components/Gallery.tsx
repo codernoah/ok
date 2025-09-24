@@ -11,8 +11,12 @@ import {
 } from 'yet-another-react-lightbox/plugins';
 import 'yet-another-react-lightbox/styles.css';
 
-const sources = Array.from({ length: 16 }, (_, i) => ({
-  src: `/ok/album/${i}.png`
+const thumbnails = Array.from({ length: 9 }, (_, i) => ({
+  src: `/ok/album/${i}_thumbnail.JPEG`
+}));
+
+const sources = Array.from({ length: 9 }, (_, i) => ({
+  src: `/ok/album/${i}.JPEG`
 }));
 
 const getPhoto = (key: string, url: string): Promise<Photo> => {
@@ -49,7 +53,7 @@ export default function Gallery() {
   React.useEffect(() => {
     setPhotos([]);
     Promise.all(
-      sources.map((i, index) => getPhoto(index.toString(), i.src))
+      thumbnails.map((i, index) => getPhoto(index.toString(), i.src))
     ).then((photo) => {
       setPhotos(photo);
     });
@@ -70,7 +74,7 @@ export default function Gallery() {
         open={open}
         index={targetIndex}
         close={() => setOpen(false)}
-        slides={photos}
+        slides={sources}
       />
     </Box>
   );

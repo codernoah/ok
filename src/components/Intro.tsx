@@ -14,8 +14,8 @@ export const Intro = () => {
       {/* <ui.Text>//TODO::인트로 (맨트 + 가족 사진?)</ui.Text> */}
       <ui.Text
         fontWeight={'medium'}
-        fontSize={'2vh'}
-        lineHeight={'3.5vh'}
+        fontSize={'18px'}
+        lineHeight={'40px'}
       >
         늘 우리보다 앞서 걷던 어머니,<br />
         우리의 길을 먼저 밟고 서 계셨죠.<br /><br />
