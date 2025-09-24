@@ -3,15 +3,14 @@ import './App.css'
 import { Map } from './components/Map'
 import { Contact } from './components/Contact'
 import Gallery from './components/Gallery'
-import React from 'react'
 import { Intro } from './components/Intro'
 import { SubTitleText } from './components/SubTitleText'
 import { Palette } from './styles'
 
 function App() {
-  const titleRef = React.useRef<HTMLDivElement>(null);
+  // const titleRef = React.useRef<HTMLDivElement>(null);
 
-  const topHeight = 120;
+  const topHeight = 96;
 
   return (
     <ui.Grid
@@ -43,15 +42,21 @@ function App() {
           alignItems={'center'}
           justifyContent={'center'}
           // bg={Palette.BASE.Gray01}
-          borderBottom={`1px solid ${Palette.BASE.Gray07}`}
-          bg={Palette.BASE.Gray09}
-          color={Palette.BASE.White}
+          borderBottom={`2px solid ${Palette.THEME.TabFontDark}`}
+          bg={Palette.THEME.TabBgDark}
+          color={Palette.THEME.TabFontDark}
+          roundedBottom={'12px'}
         >
           {/* Title */}
           <ui.Text
-            fontSize={'2xl'}
+            fontSize={'20px'}
             fontWeight={'semibold'}
             textAlign={'center'}
+            style={{
+              color: 'white',
+              mixBlendMode: 'hard-light',
+            }}
+            filter={`drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.85))`}
           >사랑하는 어머니,<br /> 심순옥 여사님의 70번째 생신을 축하해 주세요.</ui.Text>
         </ui.Flex>
       </ui.GridItem>
@@ -69,24 +74,19 @@ function App() {
         >
           <ui.Box w='95%' h='full'>
             <ui.VStack gap={'80px'}>
-              <ui.Box h='auto' w='full' ref={titleRef}>
-                <ui.Flex
-                  w='full' h='auto'
-                  justifyItems={'center'}
-                  alignItems={'center'}
-                  justifyContent={'flex-end'}
-                >
-                  {/* Title */}
-                  <ui.Text
-                    fontSize={'2.5vw'}
-                    textAlign={'right'}
-                  >2025년 10월 11일<br />12시 20분</ui.Text>
-                </ui.Flex>
+                <SubTitleText text='일시' />
+              <ui.Box mt={'-80px'}>
+                <ui.Text
+                  px={'20px'}
+                  fontWeight={'semibold'}
+                  fontSize={'19px'}
+                  textAlign={'center'}
+                >2025년 10월 11일 낮 12시 20분</ui.Text>
               </ui.Box>
 
               <Intro />
 
-              <ui.Flex w='full' h='20dvh'
+              <ui.Flex w='full' h='20vh'
                 justifyItems={'center'}
                 alignItems={'center'}
                 justifyContent={'center'}

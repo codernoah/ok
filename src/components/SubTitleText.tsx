@@ -11,6 +11,7 @@ export function SubTitleText({ text }: SubTitleTextProps) {
     rounded={'20px'}
     border={`1px solid ${Palette.THEME.PointOrange}`}
     mb={6}
+    boxShadow='inset 0px 4px 6px rgba(0, 0, 0, 0.15)'
     >
       <ui.Center>
         <ui.Text
