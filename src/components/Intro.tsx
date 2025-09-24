@@ -1,21 +1,38 @@
 import * as ui from '@chakra-ui/react';
+import { SubTitleText } from './SubTitleText';
 
 export const Intro = () => {
 
   return (
-    <ui.Flex justifyItems={'center'} w='full'
+    <ui.VStack
+      justifyItems={'center'}
+      w='full'
       h='auto'
-      alignItems={'flex-end'}
-      justifyContent={'flex-start'}
-      // borderWidth={1}
-      // borderColor={'white'}
+      position='relative'
     >
-      {/* Intro */}
-      {/* <ui.Text>//TODO::인트로 (맨트 + 가족 사진?)</ui.Text> */}
-      <ui.Text
+      <SubTitleText text='소중한 당신을 초대합니다.' />
+      <ui.Image
+        src={'/ok/album/5.JPEG'}
+        w='full'
+        h='60vh'
+        objectFit={'cover'}
+        rounded={30}
+      />
+      <ui.VStack textAlign={'center'} gap={10} lineHeight={3} mt='80px'>
+        <ui.Text fontSize={'lg'}>언제나 저희의 길을 밝혀주시던 등대이자,<br />든든한 버팀목이셨던 어머니의 칠순을 맞이하여<br />생일상 자리를 마련했습니다.</ui.Text>
+        <ui.Text fontSize={'lg'}>늘 저희보다 앞서 걸으며 따뜻하게 품어주셨던<br />어머니의 크고 깊은 사랑에 이제는 저희가 보답하고자 합니다.</ui.Text>
+        <ui.Text fontSize={'lg'}>어머니께서 걸어오신<br />아름다운 인생길에 감사와 존경을 표하며, <br />가족과 함께 기쁨을 나누는 소중한 시간을 보내고자 합니다.</ui.Text>
+        <ui.Text fontSize={'lg'}>바쁘신 와중에도 귀한 걸음 하시어 <br />축복해 주시면 감사하겠습니다.</ui.Text>
+      </ui.VStack>
+      {/* <ui.Text
         fontWeight={'medium'}
         fontSize={'18px'}
         lineHeight={'40px'}
+        position={'absolute'}
+        top={0}
+        right={10}
+        color={Palette.THEME.EdgeLight}
+        textAlign={'right'}
       >
         늘 우리보다 앞서 걷던 어머니,<br />
         우리의 길을 먼저 밟고 서 계셨죠.<br /><br />
@@ -30,7 +47,7 @@ export const Intro = () => {
 
         환하게 웃는 어머니의 얼굴이<br />
         우리의 새로운 길이 될 수 있도록.
-      </ui.Text>
-    </ui.Flex>
+      </ui.Text> */}
+    </ui.VStack>
   );
 }

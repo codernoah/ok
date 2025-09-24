@@ -14,7 +14,7 @@ const ContactItem = ({
 
   return (
     <ui.Flex gap={3}>
-      <ui.Text fontWeight={'semibold'}>{name}</ui.Text>
+      <ui.Text fontSize={'20px'} fontWeight={'semibold'}>{name}</ui.Text>
       <ui.Link href={`tel:${phone}`}>
         <ui.Icon size='md'>
           <FaPhone />
@@ -38,6 +38,9 @@ export const Contact = () => {
       gap={1}
       justifyItems={'center'}
       alignItems={'center'}
+      // borderWidth={1}
+      // borderColor={'white'}
+      // borderRadius={'30px'}
     >
       <ui.GridItem area='title'>
         <SubTitleText text='연락처' />

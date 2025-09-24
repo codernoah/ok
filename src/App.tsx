@@ -11,56 +11,64 @@ import { Palette } from './styles'
 function App() {
   const titleRef = React.useRef<HTMLDivElement>(null);
 
+  const topHeight = 120;
+
   return (
     <ui.Grid
-      w='100vw'
+      w='full'
       h='100vh'
       justifyContent={'center'}
       templateAreas={`'header'
-      'gap'
       'body'`}
-      templateRows={'150px 20px 1fr'}
-      bg={Palette.BASE.White}
-      color={Palette.BASE.Black}
+      templateRows={`${topHeight}px 1fr`}
+    // bg={Palette.BASE.White}
+    // color={Palette.BASE.Black}
     >
       <ui.Image
         position={'fixed'}
         top={0}
         left={0}
-        src={'/ok/album/0.png'}
+        src={'/ok/album/0.JPEG'}
         w='100vw'
         h='100vh'
         objectFit={'cover'}
         opacity={0.3}
-        zIndex={0}
+        zIndex={-1}
       />
       <ui.GridItem
         area='header'
         w='full'
-        zIndex={1}
       >
         <ui.Flex justifyItems={'center'} w='full' h='full'
           alignItems={'center'}
           justifyContent={'center'}
           // bg={Palette.BASE.Gray01}
-          borderBottom={`1px solid ${Palette.BASE.Gray08}`}
+          borderBottom={`1px solid ${Palette.BASE.Gray07}`}
+          bg={Palette.BASE.Gray09}
+          color={Palette.BASE.White}
         >
           {/* Title */}
           <ui.Text
-            fontSize={'4vw'}
+            fontSize={'2xl'}
             fontWeight={'semibold'}
             textAlign={'center'}
           >사랑하는 어머니,<br /> 심순옥 여사님의 70번째 생신을 축하해 주세요.</ui.Text>
         </ui.Flex>
       </ui.GridItem>
-      <ui.GridItem area='body' w='full'
+      <ui.GridItem
+        w='full'
+        h='full'
+        minH={`calc(100vh - ${topHeight}px)`}
+        area='body'
+        overflowY={'auto'}
       >
         <ui.Flex
           h='full'
           justifyContent={'center'}
+          mt={5}
         >
           <ui.Box w='95%' h='full'>
-            <ui.VStack gap={50}>
+            <ui.VStack gap={'80px'}>
               <ui.Box h='auto' w='full' ref={titleRef}>
                 <ui.Flex
                   w='full' h='auto'
@@ -78,31 +86,10 @@ function App() {
 
               <Intro />
 
-              <ui.Flex justifyItems={'center'} w='full' h='10dvh'
-                alignItems={'center'}
-                justifyContent={'center'}
-                direction={'column'}
-                zIndex={1}
-              >
-                {/* 오시는 길 */}
-                <SubTitleText text='오시는 길' />
-                <ui.Flex>
-                  <ui.Text>경기 의왕시 백운안길 61</ui.Text>
-                </ui.Flex>
-                <ui.Flex>
-                  <ui.Text>경기 의왕시 학의동 874-1</ui.Text>
-                </ui.Flex>
-              </ui.Flex>
-              <Map />
-
               <ui.Flex w='full' h='20dvh'
                 justifyItems={'center'}
                 alignItems={'center'}
                 justifyContent={'center'}
-                borderWidth={1}
-                borderColor={'white'}
-                borderRadius={'30px'}
-                zIndex={1}
               >
                 {/* 연락처 */}
                 <Contact />
@@ -116,6 +103,22 @@ function App() {
                 {/* 갤러리 */}
                 {/* <ui.Text>//TODO::갤러리 (엄마, 아빠 사진?)</ui.Text> */}
               </ui.Flex>
+
+              <ui.Flex justifyItems={'center'} w='full' h='10dvh'
+                alignItems={'center'}
+                justifyContent={'center'}
+                direction={'column'}
+              >
+                {/* 오시는 길 */}
+                <SubTitleText text='오시는 길' />
+                <ui.Flex>
+                  <ui.Text>도로명 주소: 경기 의왕시 백운안길 61</ui.Text>
+                </ui.Flex>
+                <ui.Flex>
+                  <ui.Text>지번 주소: 경기 의왕시 학의동 874-1</ui.Text>
+                </ui.Flex>
+              </ui.Flex>
+              <Map />
               <ui.Box h='30px' />
             </ui.VStack>
           </ui.Box>

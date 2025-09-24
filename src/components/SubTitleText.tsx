@@ -1,3 +1,4 @@
+import { Palette } from '@/styles';
 import * as ui from '@chakra-ui/react';
 
 export interface SubTitleTextProps {
@@ -6,11 +7,19 @@ export interface SubTitleTextProps {
 
 export function SubTitleText({ text }: SubTitleTextProps) {
   return (
-    <ui.Text
-      fontWeight={'semibold'}
-      fontSize={'20px'}
-      py={'10px'}
+    <ui.Box minW={'20vw'}
+    rounded={'20px'}
+    border={`1px solid ${Palette.THEME.PointOrange}`}
+    mb={6}
     >
-      {text}</ui.Text>
+      <ui.Center>
+        <ui.Text
+        px={'20px'}
+          fontWeight={'semibold'}
+          fontSize={'20px'}
+          py={'3px'}
+        >{text}</ui.Text>
+      </ui.Center>
+    </ui.Box>
   );
 }

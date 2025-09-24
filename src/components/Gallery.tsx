@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Text, Center } from "@chakra-ui/react";
 import React from "react";
 import { RowsPhotoAlbum, type Photo } from "react-photo-album";
 import "react-photo-album/rows.css";
@@ -10,6 +10,7 @@ import {
   Zoom,
 } from 'yet-another-react-lightbox/plugins';
 import 'yet-another-react-lightbox/styles.css';
+import { SubTitleText } from "./SubTitleText";
 
 const thumbnails = Array.from({ length: 9 }, (_, i) => ({
   src: `/ok/album/${i}_thumbnail.JPEG`
@@ -61,12 +62,20 @@ export default function Gallery() {
 
   return (
     <Box w='full' h='full'>
+      <Center>
+        <SubTitleText text='갤러리' />
+      </Center>
+      <Box h='30px' />
       <RowsPhotoAlbum photos={photos}
         onClick={({ index }) => {
           setTargetIndex(index);
           setOpen(true);
         }}
       />
+      <Box h='30px' />
+      <Center>
+        <Text fontSize={'sm'}>이미지를 클릭하시면 확대보기가 가능합니다.</Text>
+      </Center>
       <Lightbox
         plugins={[Fullscreen, Share, Zoom, Download]}
         fullscreen={{ ref: fullscreenRef }}

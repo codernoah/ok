@@ -6,7 +6,7 @@ export const Map = () => {
   const aspectRatio = bestFit.w / bestFit.h;
   // const dw = window.innerWidth < bestFit.w ? window.innerWidth * 0.8 : bestFit.w;
   const dw = React.useMemo(() => {
-    return window.innerWidth * 0.9;
+    return window.innerWidth;
   }, [window.innerWidth]);
   const dh = dw / aspectRatio;
 
