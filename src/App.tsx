@@ -42,7 +42,7 @@ function App() {
           alignItems={'center'}
           justifyContent={'center'}
           // bg={Palette.BASE.Gray01}
-          borderBottom={`2px solid ${Palette.THEME.TabFontDark}`}
+          borderBottom={`1px solid ${Palette.THEME.TabFontDark}`}
           bg={Palette.THEME.TabBgDark}
           color={Palette.THEME.TabFontDark}
           roundedBottom={'12px'}
