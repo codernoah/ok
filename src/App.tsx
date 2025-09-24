@@ -6,6 +6,7 @@ import Gallery from './components/Gallery'
 import { Intro } from './components/Intro'
 import { SubTitleText } from './components/SubTitleText'
 import { Palette } from './styles'
+import { Title } from './components/Title'
 
 function App() {
   // const titleRef = React.useRef<HTMLDivElement>(null);
@@ -20,9 +21,19 @@ function App() {
       templateAreas={`'header'
       'body'`}
       templateRows={`${topHeight}px 1fr`}
-    // bg={Palette.BASE.White}
-    // color={Palette.BASE.Black}
+      // bg={Palette.BASE.White}
+      // color={Palette.BASE.Black}
+      color='white'
     >
+      <ui.Box
+        position={'fixed'}
+        top={0}
+        left={0}
+        w='100vw'
+        h='100vh'
+        zIndex={-2}
+        bg='black'
+      />
       <ui.Image
         position={'fixed'}
         top={0}
@@ -38,27 +49,7 @@ function App() {
         area='header'
         w='full'
       >
-        <ui.Flex justifyItems={'center'} w='full' h='full'
-          alignItems={'center'}
-          justifyContent={'center'}
-          // bg={Palette.BASE.Gray01}
-          borderBottom={`1px solid ${Palette.THEME.TabFontDark}`}
-          bg={Palette.THEME.TabBgDark}
-          color={Palette.THEME.TabFontDark}
-          roundedBottom={'12px'}
-        >
-          {/* Title */}
-          <ui.Text
-            fontSize={'20px'}
-            fontWeight={'semibold'}
-            textAlign={'center'}
-            style={{
-              color: 'white',
-              mixBlendMode: 'hard-light',
-            }}
-            filter={`drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.85))`}
-          >사랑하는 어머니,<br /> 심순옥 여사님의 70번째 생신을 축하해 주세요.</ui.Text>
-        </ui.Flex>
+        <Title />
       </ui.GridItem>
       <ui.GridItem
         w='full'
@@ -74,7 +65,7 @@ function App() {
         >
           <ui.Box w='95%' h='full'>
             <ui.VStack gap={'80px'}>
-                <SubTitleText text='일시' />
+              <SubTitleText text='일시' />
               <ui.Box mt={'-80px'}>
                 <ui.Text
                   px={'20px'}
@@ -118,8 +109,24 @@ function App() {
                   <ui.Text>지번 주소: 경기 의왕시 학의동 874-1</ui.Text>
                 </ui.Flex>
               </ui.Flex>
+
               <Map />
-              <ui.Box h='30px' />
+
+              <ui.Box w='full' h='10px' position={'relative'}>
+                <ui.Image src='/ok/deco.svg'
+                  position={'absolute'}
+                  bottom={'0px'}
+                  left={'-2.5%'}
+                  boxSize={'45px'}
+                />
+                <ui.Image src='/ok/deco.svg'
+                  position={'absolute'}
+                  bottom={'0px'}
+                  right={'-2.5%'}
+                  boxSize={'45px'}
+                  transform={'rotate(-90deg)'}
+                />
+              </ui.Box>
             </ui.VStack>
           </ui.Box>
         </ui.Flex>

@@ -17,7 +17,7 @@ const ContactItem = ({
       <ui.Text fontSize={'20px'} fontWeight={'semibold'}>{name}</ui.Text>
       <ui.Link href={`tel:${phone}`}>
         <ui.Icon size='md'>
-          <FaPhone />
+          <FaPhone color='white'/>
         </ui.Icon>
       </ui.Link>
     </ui.Flex>
