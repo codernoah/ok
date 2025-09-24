@@ -1,10 +1,10 @@
 @font-face {
-	font-family: 'SeoulHangangM';
-	src: url('/ok/fonts/SeoulHangangM.ttf') format('truetype');
+	font-family: 'SeoulHangangB';
+	src: url('/ok/fonts/SeoulHangangB.woff2') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 body {
-  font-family: 'SeoulHangangM', sans-serif;
+  font-family: 'SeoulHangangB', sans-serif;
 }
