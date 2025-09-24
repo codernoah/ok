@@ -6,7 +6,6 @@ export const Title = () => {
     <ui.Flex justifyItems={'center'} w='full' h='full'
       alignItems={'center'}
       justifyContent={'center'}
-      // bg={Palette.BASE.Gray01}
       border={`1px solid ${Palette.THEME.TabFontDark}`}
       bg={Palette.THEME.TabBgDark}
       color={Palette.THEME.TabFontDark}

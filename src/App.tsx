@@ -5,7 +5,6 @@ import { Contact } from './components/Contact'
 import Gallery from './components/Gallery'
 import { Intro } from './components/Intro'
 import { SubTitleText } from './components/SubTitleText'
-import { Palette } from './styles'
 import { Title } from './components/Title'
 
 function App() {
