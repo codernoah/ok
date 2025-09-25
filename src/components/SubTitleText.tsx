@@ -17,7 +17,7 @@ export function SubTitleText({ text }: SubTitleTextProps) {
         <ui.Text
         px={'20px'}
           fontWeight={'semibold'}
-          fontSize={'18px'}
+          fontSize={'20px'}
           py={'3px'}
         >{text}</ui.Text>
       </ui.Center>

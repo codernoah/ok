@@ -11,7 +11,7 @@ export const Title = () => {
       bg={Palette.BASE.Gray10}
       // bg={Palette.THEME.TabBgDark}
       // color={Palette.THEME.TabFontDark}
-      roundedBottom={'2px'}
+      // roundedBottom={'2px'}
       position='relative'
     >
       {/* <ui.Image src='/ok/deco.svg'
@@ -34,8 +34,8 @@ export const Title = () => {
           fontSize={'18px'}
           fontWeight={'medium'}
           textAlign={'center'}
-          mb={3}
-        >사랑하는 어머니,<br /> 심순옥 여사님의 70번째 생신을 축하해 주세요.</ui.Text>
+          // mb={3}
+        >사랑하는 어머니,<br />❤️ 심순옥 여사님의 칠순을 축하해 주세요 ❤️ </ui.Text>
         {/* <ui.Text
           fontSize={'13px'}
           fontWeight={'medium'}

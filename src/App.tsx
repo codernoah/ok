@@ -10,7 +10,7 @@ import { Title } from './components/Title'
 function App() {
   // const titleRef = React.useRef<HTMLDivElement>(null);
 
-  const topHeight = 96;
+  const topHeight = 78;
 
   return (
     <ui.Grid
@@ -69,7 +69,7 @@ function App() {
                 <ui.Text
                   px={'20px'}
                   fontWeight={'semibold'}
-                  fontSize={'16px'}
+                  fontSize={'17px'}
                   textAlign={'center'}
                 >2025년 10월 11일 낮 12시 20분</ui.Text>
               </ui.Box>
