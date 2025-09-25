@@ -18,11 +18,11 @@ export const Intro = () => {
         objectFit={'cover'}
         rounded={30}
       />
-      <ui.VStack textAlign={'center'} gap={10} lineHeight={3} mt='80px'>
-        <ui.Text fontSize={'18px'}>언제나 저희의 길을 밝혀주시던 등대이자,<br />든든한 버팀목이셨던 어머니의 칠순을 맞이하여<br />생일상 자리를 마련했습니다.</ui.Text>
-        <ui.Text fontSize={'18px'}>늘 저희보다 앞서 걸으며 <br />따뜻하게 품어주셨던<br />어머니의 크고 깊은 사랑에<br />이제는 저희가 보답하고자 합니다.</ui.Text>
-        <ui.Text fontSize={'18px'}>어머니께서 걸어오신<br />아름다운 인생길에 감사와 존경을 표하며, <br />가족과 함께 기쁨을 나누는<br />소중한 시간을 보내고자 합니다.</ui.Text>
-        <ui.Text fontSize={'18px'}>바쁘신 와중에도 귀한 걸음 하시어 <br />축복해 주시면 감사하겠습니다.</ui.Text>
+      <ui.VStack textAlign={'center'} gap={10} lineHeight={2.5} mt='80px'>
+        <ui.Text fontSize={'16px'}>언제나 저희의 길을 밝혀주시던 등대이자,<br />든든한 버팀목이셨던 어머니의 칠순을 맞이하여<br />생일상 자리를 마련했습니다.</ui.Text>
+        <ui.Text fontSize={'16px'}>늘 저희보다 앞서 걸으며 <br />따뜻하게 품어주셨던<br />어머니의 크고 깊은 사랑에<br />이제는 저희가 보답하고자 합니다.</ui.Text>
+        <ui.Text fontSize={'16px'}>어머니께서 걸어오신<br />아름다운 인생길에 감사와 존경을 표하며, <br />가족과 함께 기쁨을 나누는<br />소중한 시간을 보내고자 합니다.</ui.Text>
+        <ui.Text fontSize={'16px'}>바쁘신 와중에도 귀한 걸음 하시어 <br />축복해 주시면 감사하겠습니다.</ui.Text>
       </ui.VStack>
       {/* <ui.Text
         fontWeight={'medium'}

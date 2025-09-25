@@ -69,7 +69,7 @@ function App() {
                 <ui.Text
                   px={'20px'}
                   fontWeight={'semibold'}
-                  fontSize={'19px'}
+                  fontSize={'16px'}
                   textAlign={'center'}
                 >2025년 10월 11일 낮 12시 20분</ui.Text>
               </ui.Box>
@@ -112,7 +112,7 @@ function App() {
               <Map />
 
               <ui.Box w='full' h='10px' position={'relative'}>
-                <ui.Image src='/ok/deco.svg'
+                {/* <ui.Image src='/ok/deco.svg'
                   position={'absolute'}
                   bottom={'0px'}
                   left={'-2.5%'}
@@ -124,7 +124,7 @@ function App() {
                   right={'-2.5%'}
                   boxSize={'45px'}
                   transform={'rotate(-90deg)'}
-                />
+                /> */}
               </ui.Box>
             </ui.VStack>
           </ui.Box>

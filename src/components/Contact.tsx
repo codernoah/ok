@@ -14,7 +14,7 @@ const ContactItem = ({
 
   return (
     <ui.Flex gap={3}>
-      <ui.Text fontSize={'20px'} fontWeight={'semibold'}>{name}</ui.Text>
+      <ui.Text fontSize={'16px'} fontWeight={'semibold'}>{name}</ui.Text>
       <ui.Link href={`tel:${phone}`}>
         <ui.Icon size='md'>
           <FaPhone color='white'/>
