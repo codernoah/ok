@@ -12,7 +12,7 @@ export const Intro = () => {
     >
       <SubTitleText text='소중한 당신을 초대합니다.' />
       <ui.Image
-        src={'/ok/album/5.JPEG'}
+        src={'/ok/album/intro.JPEG'}
         w='full'
         // h='60vh'
         objectFit={'cover'}

@@ -12,12 +12,26 @@ import {
 import 'yet-another-react-lightbox/styles.css';
 import { SubTitleText } from "./SubTitleText";
 
-const thumbnails = Array.from({ length: 9 }, (_, i) => ({
-  src: `/ok/album/${i}_thumbnail.JPEG`
+const order = [
+  0,
+  1,
+  2,
+
+  4,
+  6,
+  5,
+
+  7,
+  8,
+  3,
+];
+
+const thumbnails = Array.from(order, _ => ({
+  src: `/ok/album/${_}_thumbnail.JPEG`
 }));
 
-const sources = Array.from({ length: 9 }, (_, i) => ({
-  src: `/ok/album/${i}.JPEG`
+const sources = Array.from(order, _ => ({
+  src: `/ok/album/${_}.JPEG`
 }));
 
 const getPhoto = (key: string, url: string): Promise<Photo> => {
