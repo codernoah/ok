@@ -6,6 +6,7 @@ import Gallery from './components/Gallery'
 import { Intro } from './components/Intro'
 import { SubTitleText } from './components/SubTitleText'
 import { Title } from './components/Title'
+import { Palette } from './styles'
 
 function App() {
   // const titleRef = React.useRef<HTMLDivElement>(null);
@@ -22,7 +23,8 @@ function App() {
       templateRows={`${topHeight}px 1fr`}
       // bg={Palette.BASE.White}
       // color={Palette.BASE.Black}
-      color='white'
+      color={Palette.BASE.Gray08}
+    // textShadow={`0px 0px 0.5px ${Palette.BASE.Gray11}`}
     >
       <ui.Box
         position={'fixed'}
@@ -31,7 +33,7 @@ function App() {
         w='100vw'
         h='100vh'
         zIndex={-2}
-        bg='black'
+        bg={Palette.BASE.Gray01}
       />
       <ui.Image
         position={'fixed'}
@@ -41,7 +43,7 @@ function App() {
         w='100vw'
         h='100vh'
         objectFit={'cover'}
-        opacity={0.3}
+        opacity={0.35}
         zIndex={-1}
       />
       <ui.GridItem
@@ -71,6 +73,7 @@ function App() {
                   fontWeight={'semibold'}
                   fontSize={'17px'}
                   textAlign={'center'}
+                  textShadow={`0px 0px 0.5px ${Palette.BASE.Gray11}`}
                 >2025년 10월 11일 낮 12시 20분</ui.Text>
               </ui.Box>
 
@@ -101,10 +104,14 @@ function App() {
               >
                 {/* 오시는 길 */}
                 <SubTitleText text='오시는 길' />
-                <ui.Flex>
+                <ui.Flex
+                  textShadow={`0px 0px 0.5px ${Palette.BASE.Gray11}`}
+                >
                   <ui.Text>도로명 주소: 경기 의왕시 백운안길 61</ui.Text>
                 </ui.Flex>
-                <ui.Flex>
+                <ui.Flex
+                  textShadow={`0px 0px 0.5px ${Palette.BASE.Gray11}`}
+                >
                   <ui.Text>지번 주소: 경기 의왕시 학의동 874-1</ui.Text>
                 </ui.Flex>
               </ui.Flex>

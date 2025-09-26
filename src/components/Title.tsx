@@ -7,8 +7,9 @@ export const Title = () => {
       alignItems={'center'}
       justifyContent={'center'}
       // border={`1px solid ${Palette.THEME.TabFontDark}`}
-      borderBottom={`1px solid ${Palette.THEME.EdgeDark}`}
-      bg={Palette.BASE.Gray10}
+      borderBottom={`2px solid ${Palette.BASE.Gray04}`}
+      bg={Palette.BASE.White}
+      textShadow={`0px 0px 0.5px ${Palette.BASE.Gray11}`}
       // bg={Palette.THEME.TabBgDark}
       // color={Palette.THEME.TabFontDark}
       // roundedBottom={'2px'}
@@ -35,7 +36,7 @@ export const Title = () => {
           fontWeight={'medium'}
           textAlign={'center'}
           // mb={3}
-        >사랑하는 어머니,<br />❤️ 심순옥 여사님의 칠순을 축하해 주세요 ❤️ </ui.Text>
+        >❤️ 사랑하는 어머니 ❤️<br />심순옥 여사님의 칠순을 축하해 주세요.️</ui.Text>
         {/* <ui.Text
           fontSize={'13px'}
           fontWeight={'medium'}

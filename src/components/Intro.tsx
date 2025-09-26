@@ -1,5 +1,6 @@
 import * as ui from '@chakra-ui/react';
 import { SubTitleText } from './SubTitleText';
+import { Palette } from '@/styles';
 
 export const Intro = () => {
 
@@ -10,15 +11,17 @@ export const Intro = () => {
       h='auto'
       position='relative'
     >
-      <SubTitleText text='소중한 당신을 초대합니다.' />
+      <SubTitleText text='소중한 당신을 초대합니다' />
       <ui.Image
         src={'/ok/album/intro.JPEG'}
         w='full'
         // h='60vh'
         objectFit={'cover'}
-        rounded={30}
+        rounded='12px'
       />
-      <ui.VStack textAlign={'center'} gap={10} lineHeight={2.5} mt='80px'>
+      <ui.VStack textAlign={'center'} gap={10} lineHeight={2.5} mt='80px'
+        textShadow={`0px 0px 0.5px ${Palette.BASE.Gray11}`}
+      >
         <ui.Text fontSize={'18px'}>언제나 저희의 길을 밝혀주시던 등대이자,<br />든든한 버팀목이셨던 어머니의 칠순을 맞이하여<br />생일상 자리를 마련했습니다.</ui.Text>
         <ui.Text fontSize={'18px'}>늘 저희보다 앞서 걸으며 <br />따뜻하게 품어주셨던<br />어머니의 크고 깊은 사랑에<br />이제는 저희가 보답하고자 합니다.</ui.Text>
         <ui.Text fontSize={'18px'}>어머니께서 걸어오신<br />아름다운 인생길에 감사와 존경을 표하며, <br />가족과 함께 기쁨을 나누는<br />소중한 시간을 보내고자 합니다.</ui.Text>
