@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, IconButton, Image } from "@chakra-ui/react";
 import React from "react";
 
 export const Map = () => {
@@ -32,14 +32,40 @@ export const Map = () => {
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.0913118393073!2d127.00446316467726!3d37.36401622723979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5e82e6ef6cd7%3A0x70effd5c03631c63!2z67Cx7Jq07JuQ!5e0!3m2!1sko!2skr!4v1759131856474!5m2!1sko!2skr"
         width={`${dw}px`} height={`${dh}px`}
         style={{ border: 0 }} loading="lazy" />
-      <Flex mt={5} gap={3}
+      <Flex mt='40px' gap={'60px'}
         justifyContent={'center'}
       >
         {/* <a href={`https://m.map.naver.com/route/car.nhn?dname=${encodeURIComponent(title)}&dlat=${latitude}&dlng=${longitude}`}>네이버지도</a> */}
-        <a href={`nmap://navigation?dlat=${latitude}&dlng=${longitude}&dname=${encodeURIComponent(title)}`}>네이버지도</a>
+        <IconButton
+          onClick={() => {
+            window.location.href = `nmap://navigation?dlat=${latitude}&dlng=${longitude}&dname=${encodeURIComponent(title)}`;
+          }}
+          boxSize={'60px'}
+        >
+          <Image src={'/ok/maps/naver_map.webp'} boxSize={'60px'} />
+        </IconButton>
+
+        <IconButton
+          onClick={() => {
+            window.location.href = `tmap://route?rGoName=${encodeURIComponent(title)}&rGoX=${latitude}&rGoY=${longitude}`;
+          }}
+          boxSize={'60px'}
+        >
+          <Image src={'/ok/maps/tmap.svg'} boxSize={'60px'} />
+        </IconButton>
+
+        <IconButton
+          onClick={() => {
+            window.location.href = `https://map.kakao.com/link/to/${encodeURIComponent(title)},${latitude},${longitude}`;
+          }}
+          boxSize={'60px'}
+        >
+          <Image src={'/ok/maps/kakaomap_basic.png'} boxSize={'60px'} />
+        </IconButton>
+        {/* <a href={`nmap://navigation?dlat=${latitude}&dlng=${longitude}&dname=${encodeURIComponent(title)}`}>네이버지도</a> */}
         {/* <a href={`https://api.tmap.co.kr/app/link?goalname=${encodeURIComponent(title)}&goalx=${latitude}&goaly=${longitude}`}>티맵</a> */}
-        <a href={`tmap://?rGoName=${encodeURIComponent(title)}&rGoX=${latitude}&rGoY=${longitude}`}>티맵</a>
-        <a href={`https://map.kakao.com/link/to/${encodeURIComponent(title)},${latitude},${longitude}`}>카카오내비</a>
+        {/* <a href={`tmap://?rGoName=${encodeURIComponent(title)}&rGoX=${latitude}&rGoY=${longitude}`}>티맵</a>
+        <a href={`https://map.kakao.com/link/to/${encodeURIComponent(title)},${latitude},${longitude}`}>카카오내비</a> */}
         {/* <Button onClick={handleTmapOpen}>
           Tmap
         </Button>
