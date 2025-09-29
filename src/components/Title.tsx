@@ -7,13 +7,17 @@ export const Title = () => {
       alignItems={'center'}
       justifyContent={'center'}
       // border={`1px solid ${Palette.THEME.TabFontDark}`}
-      borderBottom={`2px solid ${Palette.BASE.Gray04}`}
-      bg={Palette.BASE.White}
+      // borderBottom={`1px solid ${Palette.BASE.Gray04}`}
       textShadow={`0px 0px 0.5px ${Palette.BASE.Gray11}`}
       // bg={Palette.THEME.TabBgDark}
       // color={Palette.THEME.TabFontDark}
       // roundedBottom={'2px'}
       position='relative'
+      bg={Palette.TITLE_BG}
+      color={Palette.TITLE_COLOR}
+
+      boxShadow={'0 3px 6px rgba(0, 0, 0, 0.2)'}
+      borderBottom={'2px solid #C8AA6A'}
     >
       {/* <ui.Image src='/ok/deco.svg'
         position={'absolute'}

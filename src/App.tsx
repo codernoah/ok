@@ -23,8 +23,8 @@ function App() {
       templateRows={`${topHeight}px 1fr`}
       // bg={Palette.BASE.White}
       // color={Palette.BASE.Black}
-      color={Palette.BASE.Gray08}
     // textShadow={`0px 0px 0.5px ${Palette.BASE.Gray11}`}
+      color={Palette.CONTENT_COLOR}
     >
       <ui.Box
         position={'fixed'}
@@ -33,7 +33,8 @@ function App() {
         w='100vw'
         h='100vh'
         zIndex={-2}
-        bg={Palette.BASE.Gray01}
+        // bg={Palette.BASE.Gray01}
+        bg={Palette.CONTENT_BG}
       />
       <ui.Image
         position={'fixed'}
@@ -65,7 +66,7 @@ function App() {
           mt={5}
         >
           <ui.Box w='95%' h='full'>
-            <ui.VStack gap={'80px'}>
+            <ui.VStack gap={'80px'} pt="20px">
               <SubTitleText text='일시' />
               <ui.Box mt={'-80px'}>
                 <ui.Text

@@ -19,7 +19,7 @@ export const Intro = () => {
         objectFit={'cover'}
         rounded='12px'
       />
-      <ui.VStack textAlign={'center'} gap={10} lineHeight={2.5} mt='80px'
+      <ui.VStack textAlign={'center'} gap={10} lineHeight={2.5} mt='40px'
         textShadow={`0px 0px 0.5px ${Palette.BASE.Gray11}`}
       >
         <ui.Text fontSize={'18px'}>언제나 저희의 길을 밝혀주시던 등대이자,<br />든든한 버팀목이셨던 어머니의 칠순을 맞이하여<br />생일상 자리를 마련했습니다.</ui.Text>

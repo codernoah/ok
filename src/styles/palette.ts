@@ -47,3 +47,12 @@ export const THEME = {
   TabFontDark: '#FFE7DD',
   SwitchCheckedBgDark: 'rgba(153, 61, 63, 0.75)',
 };
+
+export const TITLE_BG = '#A34A3E';
+export const TITLE_COLOR = '#FAF8F5'; // C8AA6A
+
+export const CONTENT_BG = '#EFEBE6'; // F7F4F0, EFEBE6
+export const CONTENT_COLOR = '#333333';
+export const SUBTITLE_COLOR = '#A34A3E'; // A34A3E
+
+// export const SUBTITLE_BG = '';
