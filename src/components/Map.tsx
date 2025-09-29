@@ -37,7 +37,8 @@ export const Map = () => {
       >
         {/* <a href={`https://m.map.naver.com/route/car.nhn?dname=${encodeURIComponent(title)}&dlat=${latitude}&dlng=${longitude}`}>네이버지도</a> */}
         <a href={`nmap://navigation?dlat=${latitude}&dlng=${longitude}&dname=${encodeURIComponent(title)}`}>네이버지도</a>
-        <a href={`https://api.tmap.co.kr/app/link?goalname=${encodeURIComponent(title)}&goalx=${latitude}&goaly=${longitude}`}>티맵</a>
+        {/* <a href={`https://api.tmap.co.kr/app/link?goalname=${encodeURIComponent(title)}&goalx=${latitude}&goaly=${longitude}`}>티맵</a> */}
+        <a href={`tmap://?rGoName=${encodeURIComponent(title)}&rGoX=${latitude}&rGoY=${longitude}`}>티맵</a>
         <a href={`https://map.kakao.com/link/to/${encodeURIComponent(title)},${latitude},${longitude}`}>카카오내비</a>
         {/* <Button onClick={handleTmapOpen}>
           Tmap
