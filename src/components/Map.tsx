@@ -1,4 +1,4 @@
-import { Box, Button, Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
 
 export const Map = () => {
@@ -17,15 +17,15 @@ export const Map = () => {
   // const tmapAppUrl = `tmap://route?rGoName=${encodeURIComponent(title)}&rGoX=${longitude}&rGoY=${latitude}`;
   // const tmapWebUrl = `https://m.tmap.co.kr/main/main.jsp#&query=${encodeURIComponent(title)}`;
 
-  const handleTmapOpen = () => {
-    // **A. 앱 호출 시도 (딥 링크)**
-    // window.location.href = tmapAppUrl;
-    window.location.href= `tmap://route?rGoName=${encodeURIComponent(title)}&rGoX=${longitude}&rGoY=${latitude}`;
-  }
+  // const handleTmapOpen = () => {
+  //   // **A. 앱 호출 시도 (딥 링크)**
+  //   // window.location.href = tmapAppUrl;
+  //   window.location.href= `tmap://route?rGoName=${encodeURIComponent(title)}&rGoX=${longitude}&rGoY=${latitude}`;
+  // }
 
-  const handleKakaoOpen = () => {
-    window.location.href = `kakaomap://route?ep=${latitude},${longitude}&by=CAR`;
-  }
+  // const handleKakaoOpen = () => {
+  //   window.location.href = `kakaomap://route?ep=${latitude},${longitude}&by=CAR`;
+  // }
 
   return (
     <Box>
@@ -35,15 +35,19 @@ export const Map = () => {
       <Flex mt={5} gap={3}
         justifyContent={'center'}
       >
-        <Button onClick={handleTmapOpen}>
+        {/* <a href={`https://m.map.naver.com/route/car.nhn?dname=${encodeURIComponent(title)}&dlat=${latitude}&dlng=${longitude}`}>네이버지도</a> */}
+        <a href={`nmap://navigation?dlat=${latitude}&dlng=${longitude}&dname=${encodeURIComponent(title)}`}>네이버지도</a>
+        <a href={`https://api.tmap.co.kr/app/link?goalname=${encodeURIComponent(title)}&goalx=${latitude}&goaly=${longitude}`}>티맵</a>
+        <a href={`https://map.kakao.com/link/to/${encodeURIComponent(title)},${latitude},${longitude}`}>카카오내비</a>
+        {/* <Button onClick={handleTmapOpen}>
           Tmap
         </Button>
-        {/* <Button onClick={() => {}}>
+        <Button onClick={() => {}}>
           Naver
-        </Button> */}
+        </Button>
         <Button onClick={() => { handleKakaoOpen }}>
           Kakao
-        </Button>
+        </Button> */}
       </Flex>
     </Box>
   )
