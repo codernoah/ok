@@ -41,17 +41,19 @@ export const Map = () => {
             window.location.href = `nmap://navigation?dlat=${latitude}&dlng=${longitude}&dname=${encodeURIComponent(title)}`;
           }}
           boxSize={'60px'}
+          bg='transparent'
         >
-          <Image src={'/ok/maps/naver_map.webp'} boxSize={'60px'} />
+          <Image src={'/ok/maps/naver_map.webp'} boxSize={'60px'} rounded={'8px'} />
         </IconButton>
 
         <IconButton
           onClick={() => {
-            window.location.href = `tmap://route?rGoName=${encodeURIComponent(title)}&rGoX=${latitude}&rGoY=${longitude}`;
+            window.location.href = `tmap://route?rGoName=${encodeURIComponent(title)}&rGoX=${longitude}&rGoY=${latitude}`;
           }}
           boxSize={'60px'}
+          bg='transparent'
         >
-          <Image src={'/ok/maps/tmap.svg'} boxSize={'60px'} />
+          <Image src={'/ok/maps/tmap.svg'} boxSize={'60px'} rounded={'8px'} />
         </IconButton>
 
         <IconButton
@@ -59,8 +61,9 @@ export const Map = () => {
             window.location.href = `https://map.kakao.com/link/to/${encodeURIComponent(title)},${latitude},${longitude}`;
           }}
           boxSize={'60px'}
+          bg='transparent'
         >
-          <Image src={'/ok/maps/kakaomap_basic.png'} boxSize={'60px'} />
+          <Image src={'/ok/maps/kakaomap_basic.png'} boxSize={'60px'} rounded={'8px'} />
         </IconButton>
         {/* <a href={`nmap://navigation?dlat=${latitude}&dlng=${longitude}&dname=${encodeURIComponent(title)}`}>네이버지도</a> */}
         {/* <a href={`https://api.tmap.co.kr/app/link?goalname=${encodeURIComponent(title)}&goalx=${latitude}&goaly=${longitude}`}>티맵</a> */}
