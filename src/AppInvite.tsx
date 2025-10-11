@@ -40,12 +40,12 @@ function AppThanks() {
       />
       <ui.GridItem
         area='header'
-        w='full'
+        w='100vw'
       >
         <ThanksTitle />
       </ui.GridItem>
       <ui.GridItem
-        w='full'
+        w='100vw'
         h='full'
         minH={`calc(100vh - ${topHeight}px)`}
         area='body'

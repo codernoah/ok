@@ -16,7 +16,7 @@ export const ThanksIntro = () => {
       >
         <ui.Text
           fontWeight={'semibold'}
-          fontSize={'20px'}
+          fontSize={'19px'}
           bg='#EFEBE686'
           border='4px double #00000080'
           rounded={'16px'}
