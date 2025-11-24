@@ -27,7 +27,7 @@ function AppThanks() {
         zIndex={-2}
         bg={Palette.CONTENT_BG}
       />
-      <ui.Image
+      {/* <ui.Image
         position={'fixed'}
         top={0}
         left={0}
@@ -35,6 +35,16 @@ function AppThanks() {
         w='100vw'
         h='100vh'
         objectFit={'cover'}
+        opacity={0.4}
+        zIndex={-1}
+      /> */}
+      <ui.Box
+        position={'fixed'}
+        top={0}
+        left={0}
+        w='100vw'
+        h='100vh'
+        background={Palette.THEME.EdgeDark}
         opacity={0.4}
         zIndex={-1}
       />
@@ -57,12 +67,12 @@ function AppThanks() {
           mt={5}
         >
           <ui.Box w='95%' h='full'>
-            <ui.VStack gap={'80px'}>
+            <ui.VStack gap={'80px'} pb={5}>
 
               <ThanksIntro />
-              <ThanksGallery />
+              {/* <ThanksGallery /> */}
 
-              <ui.Box w='full' h='10px' position={'relative'} />
+              {/* <ui.Box w='full' h='10px' position={'relative'} /> */}
             </ui.VStack>
           </ui.Box>
         </ui.Flex>
