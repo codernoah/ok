@@ -1,7 +1,7 @@
 import * as ui from '@chakra-ui/react'
 import './App.css'
 import { Palette } from './styles'
-import ThanksGallery from './components/ThanksGallery'
+// import ThanksGallery from './components/ThanksGallery'
 import { ThanksIntro } from './components/ThanksIntro'
 import { ThanksTitle } from './components/ThanksTitle'
 
